@@ -26,8 +26,8 @@ mongoose.set("useFindAndModify", false);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
  
- mongoose.connect("mongodb://localhost:27017/yelp_camp");
-//mongoose.connect("mongodb+srv://Jagadeep:<12345>@yelpcamp.c9xtg.mongodb.net/<yelp_camp>?retryWrites=true&w=majority");
+mongoose.connect("mongodb://localhost:27017/yelp_camp");
+//mongoose.connect("mongodb+srv://Jagadeep:<zP5GhqWB80ccGHbX>@cluster0.c9xtg.mongodb.net/<yelp_camp>?retryWrites=true&w=majority");
 
 app.use(flash());
 
@@ -59,7 +59,7 @@ app.use(function(req,res,next){
 app.use(campgroundRoutes);
   app.use(commentRoutes);
   
-  
-app.listen(3000,function(){
+  const port =process.env.Post || 3000;
+app.listen(port,function(){
 	console.log("Yelpcamp Server starting...");
 });
