@@ -26,7 +26,7 @@ mongoose.set("useFindAndModify", false);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
  
-mongoose.connect("mongodb://localhost:27017/yelp_camp");
+mongoose.connect("mongodb+srv://Jagadeep:<password>@cluster0.0cfyt.mongodb.net/<dbname>?retryWrites=true&w=majority");
 app.use(flash());
 
 //seedDB();
